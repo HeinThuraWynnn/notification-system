@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('subscribe.form');
 });
 
 Route::get('/test-notification', [NotificationController::class, 'sendNotificationTest']);
+Route::get('/subscribe', [NotificationController::class, 'showSubscriptionForm'])->name('subscribe.form');
+Route::put('/subscribe/{user}', [NotificationController::class, 'updateSubscriptions'])->name('subscribe');
+Route::post('/send-notification', [NotificationController::class, 'sendNotification'])->name('send.notification');
