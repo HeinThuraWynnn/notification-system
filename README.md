@@ -31,14 +31,14 @@ cd notification-system
 #### Build and Start Docker Containers
 
 Run the following command to build and start the Docker containers:
-docker-compose up -d --build
+```bash docker-compose up -d --build ```
 
 #### Run Migrations
 
-docker-compose exec app php artisan migrate
+```bash docker-compose exec app php artisan migrate ```
 
 #### Seed Dummy Data
-docker-compose exec app php artisan db:seed 
+```bash docker-compose exec app php artisan db:seed ```
 - for the testing your email account can customize in /notification-system/database/seeders/UsersTableSeeder.php
 
 
@@ -57,7 +57,7 @@ On the main page, you can update the notification types each user is subscribed 
 ### Send Test Notifications
 Click the "Send Test Notifications" button to trigger notifications for all users. This will send out emails and broadcast real-time notifications.
 
-To stop and remove the containers, run docker command: docker-compose down
+To stop and remove the containers, run docker command: ```bash docker-compose down ```
 
 
 ## Configuration
