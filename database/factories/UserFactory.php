@@ -41,4 +41,12 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+    public function withCustomEmail($email)
+    {
+        return $this->state(function (array $attributes) use ($email) {
+            return [
+                'email' => $email,
+            ];
+        });
+    }
 }
