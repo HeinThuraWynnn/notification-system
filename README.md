@@ -66,6 +66,7 @@ To stop and remove the containers, run docker command: docker-compose down
 Update the .env file to configure email settings and other environment variables.
 
 Example .env configuration for email:
+```python
 
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
@@ -84,6 +85,7 @@ PUSHER_HOST=
 PUSHER_PORT=443
 PUSHER_SCHEME=https
 PUSHER_APP_CLUSTER=us2
+```
 
 ### Broadcasting
 Configure broadcasting in config/broadcasting.php and set up Laravel Echo with Pusher or your preferred WebSocket provider.
